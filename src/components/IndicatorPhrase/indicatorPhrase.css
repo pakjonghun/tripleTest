@@ -1,4 +1,6 @@
 .indicatorPhrase .phrase {
+  display: grid;
+  grid-template-columns: 1fr 5.5fr;
   padding: 10px;
   font-size: 36px;
   letter-spacing: -1px;
@@ -7,10 +9,15 @@
     var(--animation-delay);
 }
 
-.indicatorPhrase .phrase strong {
+.indicatorPhrase .phrase .indicatorUnit,
+.indicatorPhrase .phrase .phraseIndocator {
   font-weight: 700;
 }
 
 .indicatorPhrase {
   margin-bottom: 24px;
+}
+
+.indicatorPhrase .phraseIndocator {
+  place-self: end;
 }

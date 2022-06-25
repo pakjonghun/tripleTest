@@ -10,8 +10,11 @@ const Phrase: React.FC<props> = ({ indicator, indicatorType, description }) => {
   const unit = indicatorType === 'person' ? '명' : '개'
   return (
     <li className="phrase">
-      <strong>{`${indicator}만 ${unit}의 `}</strong>
-      <span>{description}</span>
+      <strong className="phraseIndocator">{indicator}</strong>
+      <strong>
+        <span className="indicatorUnit">{`만 ${unit}의 `}</span>
+        <span>{description}</span>
+      </strong>
     </li>
   )
 }
