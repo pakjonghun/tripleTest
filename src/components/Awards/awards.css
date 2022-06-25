@@ -1,6 +1,8 @@
 .awards {
   display: flex;
   padding: 0 10px;
+  animation: fadeInAndBounce var(--animation-duration) linear
+    calc(var(--animation-delay) * 2);
 }
 
 .awards li:not(:last-child) {
@@ -23,9 +25,4 @@
 .awards .awardInfo span {
   display: inline-block;
   padding: 4px 9px;
-}
-
-.awards {
-  animation: fadeInAndBounce var(--animation-duration) linear
-    calc(var(--animation-delay) * 2);
 }

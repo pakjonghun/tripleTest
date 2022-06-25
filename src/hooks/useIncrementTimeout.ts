@@ -11,13 +11,19 @@ interface props {
 const useIncrementTimeout = ({
   endCount,
   endTime = 2000,
-  slowRate = 1.1,
+  slowRate = 1.04,
   initCount = 0,
-  initInterval = 1,
+  initInterval = 4,
 }: props) => {
   if (initInterval >= endTime) {
     throw new Error(
       'Error on useIncrementTimeout, initInterval 은 endTime 보다 클 수 없습니다. ',
+    )
+  }
+
+  if (initInterval < 1) {
+    throw new Error(
+      'Error on userIncrementTimeout, initInterval 은 1보다 커야 합니다.',
     )
   }
 
@@ -70,8 +76,12 @@ function getNextCount({
 }: GetIncrementTerm) {
   const leftCount = endCount - previousCount
   const increment = leftCount * (interval / leftTime)
+  const nextCount = previousCount + increment
+
+  console.log(leftTime)
 
   if (leftTime - interval - interval * slowRate <= 0) return endCount
-  if (previousCount + increment >= endCount) return endCount
+  if (nextCount >= endCount) return endCount
+  if (nextCount < endCount && leftTime - interval <= 0) return endCount
   return Math.round(increment) + previousCount
 }

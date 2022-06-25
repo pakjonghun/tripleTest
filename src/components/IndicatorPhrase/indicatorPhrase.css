@@ -3,6 +3,8 @@
   font-size: 36px;
   letter-spacing: -1px;
   color: var(--main-font-color);
+  animation: fadeInAndBounce var(--animation-duration) linear
+    var(--animation-delay);
 }
 
 .indicatorPhrase .phrase strong {
@@ -11,9 +13,4 @@
 
 .indicatorPhrase {
   margin-bottom: 40px;
-}
-
-.indicatorPhrase {
-  animation: fadeInAndBounce var(--animation-duration) linear
-    var(--animation-delay);
 }

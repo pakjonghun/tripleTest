@@ -1,7 +1,7 @@
 import React from 'react'
 import Phrase from './Phrase'
-import './indicatorPhrase.css'
 import useIncrementTimeout from '../../hooks/useIncrementTimeout'
+import './indicatorPhrase.css'
 
 const IndicatorPhrase = () => {
   const endTravelers = 700
@@ -9,9 +9,7 @@ const IndicatorPhrase = () => {
   const endTravelPlans = 470
 
   //아래 훅은 slowerRate 와 initInterval 인자로 시간 증가 속도를 조정할 수 있습니다.
-  const travelers = useIncrementTimeout({
-    endCount: endTravelers,
-  })
+  const travelers = useIncrementTimeout({ endCount: endTravelers })
   const reviews = useIncrementTimeout({ endCount: endTravelReviews })
   const travelPlans = useIncrementTimeout({ endCount: endTravelPlans })
 

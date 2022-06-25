@@ -1,6 +1,7 @@
 .leftImage {
   position: relative;
   padding: 10px 0;
+  animation: fadeInAndBounce var(--animation-duration) linear;
 }
 
 .leftImage .indicatorStandard {
@@ -10,8 +11,4 @@
   color: var(--small-font-color);
   font-size: 15px;
   transform: translateX(-50%);
-}
-
-.leftImage {
-  animation: fadeInAndBounce var(--animation-duration) linear;
 }
