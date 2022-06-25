@@ -1,13 +1,34 @@
 import React from 'react'
 import Phrase from './Phrase'
 import './indicatorPhrase.css'
+import useIncrementTimeout from '../../hooks/useIncrementTimeout'
 
 const IndicatorPhrase = () => {
+  const endTravelers = 700
+  const endTravelReviews = 100
+  const endTravelPlans = 470
+
+  const travelers = useIncrementTimeout({ endCount: endTravelers })
+  const reviews = useIncrementTimeout({ endCount: endTravelReviews })
+  const travelPlans = useIncrementTimeout({ endCount: endTravelPlans })
+
   return (
     <ul className="indicatorPharase">
-      <Phrase indicator={700} indicatorType="person" description="여행자" />
-      <Phrase indicator={100} indicatorType="thing" description="여행 리뷰" />
-      <Phrase indicator={470} indicatorType="thing" description="여행 일정" />
+      <Phrase
+        indicator={travelers}
+        indicatorType="person"
+        description="여행자"
+      />
+      <Phrase
+        indicator={reviews}
+        indicatorType="thing"
+        description="여행 리뷰"
+      />
+      <Phrase
+        indicator={travelPlans}
+        indicatorType="thing"
+        description="여행 일정"
+      />
     </ul>
   )
 }
