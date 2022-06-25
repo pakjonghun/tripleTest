@@ -1,8 +1,8 @@
 :root {
   /* colors */
-  --small-font-color: #959595;
   --main-font-color: #3a3a3a;
   --badge-font-color: #616161;
+  --small-font-color: #959595;
 
   /* width */
   --home-width: 1200px;
@@ -14,8 +14,8 @@
 
 @keyframes fadeInAndBounce {
   from {
-    opacity: 0.3;
-    transform: translateY(15px);
+    opacity: 0;
+    transform: translateY(50px);
   }
   to {
     opacity: 1;
