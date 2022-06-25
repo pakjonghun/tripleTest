@@ -15,6 +15,12 @@ const useIncrementTimeout = ({
   initCount = 0,
   initInterval = 1,
 }: props) => {
+  if (initInterval >= endTime) {
+    throw new Error(
+      'Error on useIncrementTimeout, initInterval 은 endTime 보다 클 수 없습니다. ',
+    )
+  }
+
   const [count, setCount] = useState(initCount)
   const [interval, setInterval] = useState(initInterval)
 
