@@ -1,6 +1,7 @@
 :root {
   /* colors */
   --main-color: pink;
+  --small-font-color: #959595;
 
   /* width */
   --home-width: 1200px;

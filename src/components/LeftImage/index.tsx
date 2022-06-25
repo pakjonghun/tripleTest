@@ -1,8 +1,9 @@
 import React from 'react'
+import './leftImage.css'
 
 const LeftImage = () => {
   return (
-    <div>
+    <div className="leftImage">
       <small className="indicatorStandard">2021년 12월 기준</small>
       <img
         width="400px"

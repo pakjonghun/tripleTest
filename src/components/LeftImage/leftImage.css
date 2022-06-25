@@ -1,0 +1,12 @@
+.leftImage {
+  position: relative;
+}
+
+.indicatorStandard {
+  position: absolute;
+  left: 50%;
+  bottom: 45px;
+  color: var(--small-font-color);
+  font-size: 15px;
+  transform: translateX(-50%);
+}
