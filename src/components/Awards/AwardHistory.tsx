@@ -15,8 +15,8 @@ const AwardHistory: React.FC<props> = ({
     <li className="awardHistory">
       <img
         className="awardHistoryImage"
-        width="60px"
-        height="60px"
+        width="53px"
+        height="53px"
         src={imageSrc}
         alt={awardWinningPlace + awards}
       />

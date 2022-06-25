@@ -1,9 +1,10 @@
 .awards {
   display: flex;
+  padding: 0 10px;
 }
 
-.awards li {
-  margin-right: 10px;
+.awards li:not(:last-child) {
+  margin-right: 28px;
 }
 
 .awards .awardHistory {
@@ -20,5 +21,6 @@
 }
 
 .awards .awardInfo span {
-  padding: 4px 10px;
+  display: inline-block;
+  padding: 4px 9px;
 }

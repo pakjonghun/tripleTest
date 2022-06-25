@@ -1,6 +1,7 @@
 .indicatorPharase .phrase {
   padding: 10px;
   font-size: 36px;
+  letter-spacing: -1px;
   color: var(--main-font-color);
 }
 
@@ -9,5 +10,5 @@
 }
 
 .indicatorPharase {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
