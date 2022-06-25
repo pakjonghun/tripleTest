@@ -6,11 +6,13 @@ import './home.css'
 
 const Home = () => {
   return (
-    <div className="home">
-      {/* <LeftImage /> */}
-      <Awards />
-      <IndicatorPhrase />
-    </div>
+    <section className="home">
+      <LeftImage />
+      <div>
+        <IndicatorPhrase />
+        <Awards />
+      </div>
+    </section>
   )
 }
 
