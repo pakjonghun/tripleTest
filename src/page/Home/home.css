@@ -1,6 +1,5 @@
 .home {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: var(--home-width);
   margin: 0 auto;

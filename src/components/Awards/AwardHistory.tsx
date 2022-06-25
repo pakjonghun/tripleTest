@@ -12,15 +12,18 @@ const AwardHistory: React.FC<props> = ({
   awardWinningPlace,
 }) => {
   return (
-    <li>
+    <li className="awardHistory">
       <img
+        className="awardHistoryImage"
         width="60px"
         height="60px"
         src={imageSrc}
         alt={awardWinningPlace + awards}
       />
-      <span>{awardWinningPlace}</span>
-      <span>{awards}</span>
+      <div className="awardInfo">
+        <span>{awardWinningPlace}</span>
+        <span>{awards}</span>
+      </div>
     </li>
   )
 }

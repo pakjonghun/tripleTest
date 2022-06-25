@@ -1,10 +1,10 @@
-.phrase {
+.indicatorPharase .phrase {
   padding: 10px;
   font-size: 36px;
   color: var(--main-font-color);
 }
 
-.phrase strong {
+.indicatorPharase .phrase strong {
   font-weight: 700;
 }
 

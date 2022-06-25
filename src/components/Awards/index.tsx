@@ -1,9 +1,10 @@
 import React from 'react'
 import AwardHistory from './AwardHistory'
+import './awards.css'
 
 const Awards = () => {
   return (
-    <ul>
+    <ul className="awards">
       <AwardHistory
         awardWinningPlace="2018 구글 플레이스토어"
         awards="올해의 앱 최우수상 수상"

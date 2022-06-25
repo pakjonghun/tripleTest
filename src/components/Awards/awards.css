@@ -1,0 +1,24 @@
+.awards {
+  display: flex;
+}
+
+.awards li {
+  margin-right: 10px;
+}
+
+.awards .awardHistory {
+  display: flex;
+}
+
+.awards .awardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--badge-font-color);
+}
+
+.awards .awardInfo span {
+  padding: 4px 10px;
+}
