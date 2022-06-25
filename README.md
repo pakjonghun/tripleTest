@@ -7,13 +7,13 @@ TRIPLE 프론트앤드 과제 입니다.
 프로젝트를 클론 받습니다.
 
 ```
-git clone url
+git clone https://github.com/pakjonghun/tripleTest
 ```
 
 클론받은 폴더로 이동하여 필요한 모듈을 설치합니다.
 
 ```
-cd triple
+cd tripleTest
 npm install
 ```
 
