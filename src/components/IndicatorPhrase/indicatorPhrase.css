@@ -1,0 +1,13 @@
+.phrase {
+  padding: 10px;
+  font-size: 36px;
+  color: var(--main-font-color);
+}
+
+.phrase strong {
+  font-weight: 700;
+}
+
+.indicatorPharase {
+  margin-bottom: 50px;
+}

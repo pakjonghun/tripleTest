@@ -9,8 +9,8 @@ interface props {
 const Phrase: React.FC<props> = ({ indicator, indicatorType, description }) => {
   const unit = indicatorType === 'person' ? '명' : '개'
   return (
-    <li>
-      <strong>{`${indicator}만 ${unit}의`}</strong>
+    <li className="phrase">
+      <strong>{`${indicator}만 ${unit}의 `}</strong>
       <span>{description}</span>
     </li>
   )
