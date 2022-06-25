@@ -9,12 +9,14 @@ const IndicatorPhrase = () => {
   const endTravelPlans = 470
 
   //아래 훅은 slowerRate 와 initInterval 인자로 시간 증가 속도를 조정할 수 있습니다.
-  const travelers = useIncrementTimeout({ endCount: endTravelers })
+  const travelers = useIncrementTimeout({
+    endCount: endTravelers,
+  })
   const reviews = useIncrementTimeout({ endCount: endTravelReviews })
   const travelPlans = useIncrementTimeout({ endCount: endTravelPlans })
 
   return (
-    <ul className="indicatorPharase">
+    <ul className="indicatorPhrase">
       <Phrase
         indicator={travelers}
         indicatorType="person"

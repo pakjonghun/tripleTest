@@ -1,14 +1,19 @@
-.indicatorPharase .phrase {
+.indicatorPhrase .phrase {
   padding: 10px;
   font-size: 36px;
   letter-spacing: -1px;
   color: var(--main-font-color);
 }
 
-.indicatorPharase .phrase strong {
+.indicatorPhrase .phrase strong {
   font-weight: 700;
 }
 
-.indicatorPharase {
+.indicatorPhrase {
   margin-bottom: 40px;
+}
+
+.indicatorPhrase {
+  animation: fadeInAndBounce var(--animation-duration) linear
+    var(--animation-delay);
 }
