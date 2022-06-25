@@ -11,9 +11,9 @@ interface props {
 const useIncrementTimeout = ({
   endCount,
   endTime = 2000,
-  slowRate = 1.04,
+  slowRate = 1.06,
   initCount = 0,
-  initInterval = 4,
+  initInterval = 10,
 }: props) => {
   if (initInterval >= endTime) {
     throw new Error(
@@ -50,7 +50,10 @@ const useIncrementTimeout = ({
     }, interval)
 
     setTimeout(() => {
-      if (timeoutId.current) clearTimeout(timeoutId.current)
+      if (timeoutId.current) {
+        clearTimeout(timeoutId.current)
+        if (count !== endCount) setCount(endCount)
+      }
     }, endTime)
   }, [count, endCount, endTime, slowRate, interval])
 
@@ -78,10 +81,7 @@ function getNextCount({
   const increment = leftCount * (interval / leftTime)
   const nextCount = previousCount + increment
 
-  console.log(leftTime)
-
   if (leftTime - interval - interval * slowRate <= 0) return endCount
   if (nextCount >= endCount) return endCount
-  if (nextCount < endCount && leftTime - interval <= 0) return endCount
   return Math.round(increment) + previousCount
 }
